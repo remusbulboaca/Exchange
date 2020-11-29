@@ -36,6 +36,24 @@ def fromCurrencyToCurrency(value,currency1, currency2):
 def click(selection):
     print(selection)
 
+def dropdownClicked(selection):
+    global fCurency
+    fCurency = selection
+    print(fCurency)
+
+def dropdown2Clicked(selection):
+    global sCurency
+    sCurency = selection
+    print(sCurency)
+
+def test():
+    print(fCurency)
+    print(sCurency)
+
+global fCurency
+global sCurency
+
+firstValue = getAllCurency()
 program = Tk()
 program.title("Schimb valutar")
 program.minsize(700,400)
@@ -46,10 +64,13 @@ label1.pack()
 e = Entry(program, width=25)
 e.pack()
 clicked = StringVar()
-dropdown1 = OptionMenu(program,clicked,*getAllCurency())
+dropdown1 = OptionMenu(program,clicked,*getAllCurency(),command=dropdownClicked)
 dropdown1.pack()
-label2 = Label(program,text=" ",pady=7)
+label2 = Label(program,text="Selecteaza moneda in care vrei sa convertesti",pady=7)
 label2.pack()
-myButton = Button(program,text="Converteste",padx=30,pady=15, fg="green", command=click(dropdown1.selection_get()))
+clicked2 = StringVar()
+dropdown2 = OptionMenu(program,clicked2,*getAllCurency(),command=dropdown2Clicked)
+dropdown2.pack()
+myButton = Button(program,text="Converteste",padx=30,pady=15, fg="green",command=test)
 myButton.pack()
 program.mainloop()
