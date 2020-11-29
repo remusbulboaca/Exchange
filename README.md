@@ -6,3 +6,6 @@ folosit va fi unul, oficial updatat automat de pe bnr.ro (crawl pe BNR sau RSS)
 
 ## Progres pana acum:
 ✅ Importa datele despre cursuri de pe BNR
+✅ Functie pentru returnat rata de schimb pentru o moneda
+✅ Functie de convertit dintr-o moneda in alta
+
