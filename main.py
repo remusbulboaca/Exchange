@@ -14,4 +14,4 @@ def exchange(currency):
         data[cols[1].text] = cols[6].text.replace(',','.')
     return data[currency]
 
-print(float(exchange('EUR'))*3)
+print(float(exchange('EUR')))
