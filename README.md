@@ -11,3 +11,8 @@ folosit va fi unul, oficial updatat automat de pe bnr.ro (crawl pe BNR sau RSS)
 
 ✅ Functie de convertit dintr-o moneda in alta
 
+✅ GUI
+
+❌ Validare date introduse + popup la date gresite
+
+❌ Refactorizare cod
