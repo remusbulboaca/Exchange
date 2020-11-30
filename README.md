@@ -1,4 +1,4 @@
-# Exchange App in Python
+# Exchange App in Python (B)
 
 Creati o aplicatie care va avea o interfata grafica si va avea functia de convertor valutar.
 Utilizatorul va putea selecta suma si moneda din care/ in care se va face conversia. Cursul
