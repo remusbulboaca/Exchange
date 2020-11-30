@@ -8,6 +8,7 @@ def getdatafrombnr():
     res = requests.get('https://www.bnr.ro/Cursul-de-schimb-524.aspx')
     soup = bs4.BeautifulSoup(res.text, 'html.parser')
     data = {}
+    data['RON'] = 1
     table_body = soup.find('tbody')
     rows = table_body.find_all('tr')
     # Contruim un Dict "data" folosing ca key coloana a doua de pe fiecare rand iar ca value ultima valoare din tabela
