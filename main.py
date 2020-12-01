@@ -59,7 +59,9 @@ def test():
     firstCurrency = float(exchange(f_curency))
     secondCurrency = float(exchange(s_curency))
     rate = firstCurrency / secondCurrency
-    print(rate * float(e.get()))
+    value_returned = rate * float(e.get())
+    text.set(value_returned)
+
 
 
 global f_curency
@@ -85,4 +87,8 @@ dropdown2 = OptionMenu(program, clicked2, *get_all_curency(), command=dropdown2_
 dropdown2.pack()
 myButton = Button(program, text="Converteste", padx=30, pady=15, fg="green", command=test)
 myButton.pack()
+text = StringVar()
+text.set(" ")
+result_label = Label(program,text=text,pady=7)
+result_label.pack()
 program.mainloop()
