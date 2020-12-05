@@ -66,7 +66,9 @@ def test():
 global f_curency
 global s_curency
 
-
+f_curency = "RON"
+s_curency = "RON"
+data = get_all_curency()
 firstValue = get_all_curency()
 program = Tk()
 program.title("Schimb valutar")
@@ -84,6 +86,7 @@ label2 = Label(program, text="Selecteaza moneda in care vrei sa convertesti", pa
 label2.pack()
 clicked2 = StringVar()
 dropdown2 = OptionMenu(program, clicked2, *get_all_curency(), command=dropdown2_clicked)
+
 dropdown2.pack()
 myButton = Button(program, text="Converteste", padx=30, pady=15, fg="green", command=test)
 myButton.pack()
