@@ -17,7 +17,6 @@ def getdatafrombnr():
         data[cols[1].text] = cols[6].text.replace(',', '.')
     return data
 
-
 def get_all_curency():
     lista = list()
     data = getdatafrombnr()
@@ -25,11 +24,9 @@ def get_all_curency():
         lista.append(x)
     return lista
 
-
 def exchange(currency):
     data = getdatafrombnr()
     return data[currency]
-
 
 def from_curency_to_curency(value, currency1, currency2):
     first_currency = float(exchange(currency1))
@@ -38,30 +35,26 @@ def from_curency_to_curency(value, currency1, currency2):
     money_received = value * rate
     return float(money_received)
 
-
 def click(selection):
     print(selection)
-
 
 def dropdown_clicked(selection):
     global f_curency
     f_curency = selection
     print(f_curency)
 
-
 def dropdown2_clicked(selection):
     global s_curency
     s_curency = selection
     print(s_curency)
-
 
 def test():
     firstCurrency = float(exchange(f_curency))
     secondCurrency = float(exchange(s_curency))
     rate = firstCurrency / secondCurrency
     value_returned = rate * float(e.get())
-    text.set(value_returned)
-
+    print(value_returned)
+    label_result.config(text=("Primesti: " + str(value_returned)))
 
 
 global f_curency
@@ -87,8 +80,6 @@ dropdown2 = OptionMenu(program, clicked2, *get_all_curency(), command=dropdown2_
 dropdown2.pack()
 myButton = Button(program, text="Converteste", padx=30, pady=15, fg="green", command=test)
 myButton.pack()
-text = StringVar()
-text.set(" ")
-result_label = Label(program,text=text,pady=7)
-result_label.pack()
+label_result = Label(program,text=" ",pady=7)
+label_result.pack()
 program.mainloop()
