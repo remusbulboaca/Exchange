@@ -17,4 +17,4 @@ folosit va fi unul, oficial updatat automat de pe bnr.ro (crawl pe BNR sau RSS)
 
 ❌ Refactorizare cod
 
-❌ Implementeaza LEU -> VALUTA / VALUTA -> LEU
+✅ Implementeaza LEU -> VALUTA / VALUTA -> LEU
