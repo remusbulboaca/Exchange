@@ -1,6 +1,7 @@
 import requests
 import bs4
 from tkinter import *
+from tkinter import messagebox
 
 
 def getdatafrombnr():
@@ -52,13 +53,19 @@ def test():
     firstCurrency = float(exchange(f_curency))
     secondCurrency = float(exchange(s_curency))
     rate = firstCurrency / secondCurrency
-    value_returned = rate * float(e.get())
-    print(value_returned)
-    label_result.config(text=("Primesti: " + str(value_returned)))
+    first_field = e.get()
+    if first_field.isnumeric() == True:
+        value_returned = rate * float(e.get())
+        print(value_returned)
+        label_result.config(text=("Primesti: " + str(value_returned)))
+    else:
+        messagebox.showerror("Eroare catastrofala","Varule doar numere sunt permise!")
+
 
 
 global f_curency
 global s_curency
+
 
 firstValue = get_all_curency()
 program = Tk()
