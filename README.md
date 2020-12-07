@@ -13,7 +13,7 @@ folosit va fi unul, oficial updatat automat de pe bnr.ro (crawl pe BNR sau RSS)
 
 ✅ GUI
 
-❌ Validare date introduse + popup la date gresite
+✅ Validare date introduse + popup la date gresite
 
 ❌ Refactorizare cod
 
