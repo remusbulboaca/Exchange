@@ -57,9 +57,9 @@ def test():
     if first_field.isnumeric() == True:
         value_returned = rate * float(e.get())
         print(value_returned)
-        label_result.config(text=("Primesti: " + str(value_returned)))
+        label_result.config(text=("Primesti: " + str(value_returned) + " "+s_curency))
     else:
-        messagebox.showerror("Eroare catastrofala","Varule doar numere sunt permise!")
+        messagebox.showerror("Eroare catastrofala","Doar valorile numerice sunt permise")
 
 
 
