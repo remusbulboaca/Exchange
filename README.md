@@ -15,6 +15,4 @@ folosit va fi unul, oficial updatat automat de pe bnr.ro (crawl pe BNR sau RSS)
 
 ✅ Validare date introduse + popup la date gresite
 
-❌ Refactorizare cod
-
 ✅ Implementeaza LEU -> VALUTA / VALUTA -> LEU
